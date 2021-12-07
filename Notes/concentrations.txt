@@ -1,0 +1,46 @@
+qValue is constant for every file.
+sValue may be unique but can't be guaranteed.
+
+The change of each single point may not be significant enough for the AI to process.
+May be better to look at the entire curve.
+
+Samples are the datasets (each entire file). The features are the plots on the graph. Each q value is not its own sample.
+
+IMPORTANT: q is X, r is I, s is error. Probably put in only r for now.
+Consider selecting only values that have a low error.
+
+Try comparing the fluctuation in the I values (the y coordinates).
+
+(Reverse linear regression.)
+
+Think:
+1. I have 20 samples.
+2. They have features I.
+3. Track the percentage of LPA added.
+
+2D array. Rows are each sample. Columns are all I values for each dataset.
+
+Data is captured from an instrument that shoots a laser at different angles to get different structures.
+
+x values are q, y values (I) and error values.
+
+When you take measurements of a real-life thing, actual instruments have a certain amount of fluctuation of how accurate your results will be. You can use a math model
+to figure out more accurate info.
+
+Error is measuring percission, not accuracy.
+
+Try Preprocessing
+
+Normalization:
+Takes any vector and reduces it into a combination of the normal vectors.
+-Maintains direction.
+-Doesn't keep extraneous information.
+-Also reducing scalar multiples.
+-Similar to standardization, but not the sample.
+
+Try discarding Q.
+
+Weigh R values with a low S more than high S.
+Example: Weighted_Residual = np.power(current_residual, 2) / np.power(current_error, 2)
+
+Research regression vs classification. We should try a regression model.
