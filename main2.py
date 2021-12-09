@@ -173,7 +173,7 @@ def fit(num_epochs, model, loss_fn, opt, train_dl):
         
         # Print the progress
         if (epoch+1) % 100 == 0:
-            print('Epoch [{}/{}], Loss: {:.8f}'.format(epoch+1, num_epochs, loss.item()))
+            print('Epoch [{}/{}], Loss: {:.12f}'.format(epoch+1, num_epochs, loss.item()))
 
 fit(10000000, model, loss_fn, opt, train_dl)
 preds = model(train)
