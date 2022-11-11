@@ -72,7 +72,7 @@ def data():
             
             # Load the model.
             model = nn.Linear(300, 1).cuda()
-            model.load_state_dict(torch.load("model2.mdx"))
+            model.load_state_dict(torch.load("model.mdx"))
             
             list(model.parameters()) # Returns a list of the model parameters.
             preds = model(train) # Generate the predicted concentration of the file.

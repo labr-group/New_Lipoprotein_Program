@@ -2,6 +2,7 @@ import csv;
 import random;
 import numpy as np;
 import glob;
+from datetime import datetime
 import constants
 
 import torch
@@ -87,7 +88,7 @@ def rawDataToDs(path):
     
     return (trainDs, trainTs, validDs, validTs)
 
-allData = rawDataToDs("TrainData")
+allData = rawDataToDs(constants.FOLDERFORTRAINING)
 train = allData[0]
 ttargets = allData[1]
 valid = allData[2]
@@ -118,7 +119,7 @@ if constants.CREATEMODEL == 1:
     model = nn.Linear(300, 1).cuda() # Can be used instead of initializing the weights & biases manually. This does it automatically.
 else:
     model = nn.Linear(300, 1).cuda()
-    model.load_state_dict(torch.load("model2.mdx"))
+    model.load_state_dict(torch.load(constants.MODELNAME))
 #model.cuda()
 #print(model2.weight)
 #print(model2.bias)
@@ -145,7 +146,7 @@ print(next(model.parameters()).is_cuda)
 # Define optimizer (used instead of manually manipulating the model's weights & biases using gradients).
 # Note: SGD is short for "stochastic gradient descent". "Stochastic" indicates that samples are selected
 # in batches (often with random shuffling) instead of as a single group.
-opt = torch.optim.SGD(model.parameters(), lr=4e-1)
+opt = torch.optim.SGD(model.parameters(), lr=constants.LR)
 
 # Utility function to train the model.
 def fit(num_epochs, model, loss_fn, opt, train_dl):
@@ -172,12 +173,65 @@ def fit(num_epochs, model, loss_fn, opt, train_dl):
             opt.zero_grad()
         
         # Print the progress
-        if (epoch+1) % 100 == 0:
+        if (epoch+1) % constants.EPOCHSPERUPDATE == 0:
             print('Epoch [{}/{}], Loss: {:.12f}'.format(epoch+1, num_epochs, loss.item()))
 
-fit(10000000, model, loss_fn, opt, train_dl)
+fit(constants.NUMEPOCHS, model, loss_fn, opt, train_dl)
 preds = model(train)
-print(ttargets)
-print(preds)
+# print(ttargets)
+# print(preds)
 
-torch.save(model.state_dict(), "model2.mdx")
+torch.save(model.state_dict(), constants.MODELNAME)
+
+filepath = "AllData\\Concen_4_5P.csv"
+temp = filepath.split("\\")
+batch = (temp[1].split("_"))[2]
+batchPer = batch.split("P")[0]
+
+# Generate output filename based on current date and time.
+now = datetime.now()
+filename = "LogFiles\\" + now.strftime("%Y-%m-%d_%H-%M-%S.log")
+print(filename)
+output = open(filename, "w")
+output.write(f"Number of epochs: {constants.NUMEPOCHS}\n")
+
+# Print trained files.
+trained_files = glob.glob(constants.FOLDERFORTRAINING + "/*.csv")
+print("Files used for training:")
+output.write("Files used for training:\n")
+for filename in trained_files:
+    print(filename.split("\\")[1])
+    output.write(filename.split("\\")[1] + "\n")
+
+all_files = glob.glob("AllData" + "/*.csv")
+compilation = []
+
+print("\n\nAll File Concentration Predictions:\n")
+output.write("\n\nAll File Concentration Predictions:")
+for i in range(len(all_files)):
+    
+    temp = all_files[i].split("\\")
+    batch = (temp[1].split("_"))[2]
+    batchPer = float(batch.split("P")[0])
+    
+    r = seperateColumn(1, all_files[i]) # Get the r column.
+    r = r[55:355] # Extract the unused data.
+    finalR = []
+    finalR.append(r) # Essentially turn the 1D array into a 2D array.
+    train = np.array(finalR) # Convert to numpy array.
+    train = torch.from_numpy(train).cuda() # Turn it into a pytorch tensor to be used.
+    
+    list(model.parameters()) # Returns a list of the model parameters.
+    preds = model(train) # Generate the predicted concentration of the file.
+    value = preds.item() # Get the prediction from the preds tensor.
+    
+    temp = [all_files[i], round(value, 6), batchPer, round(batchPer - value, 6)]
+    compilation.append(temp)
+
+compilation.sort(key=lambda x: abs(x[3]))
+    
+for i in range(len(compilation)):
+    print(f"File: {compilation[i][0]}:\nPredicted concentration: {compilation[i][1]}%\tActual concentration: {compilation[i][2]}%\tDifference: {compilation[i][3]}%\n")
+    output.write(f"\n\nFile: {compilation[i][0]}:\nPredicted concentration: {compilation[i][1]}%\tActual concentration: {compilation[i][2]}%\tDifference: {compilation[i][3]}%")
+
+output.close()
