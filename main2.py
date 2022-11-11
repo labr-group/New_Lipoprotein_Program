@@ -86,13 +86,14 @@ def rawDataToDs(path):
             """
         rand = random.randint(0,100)
     
-    return (trainDs, trainTs, validDs, validTs)
+    return (trainDs, trainTs)
+    #return (trainDs, trainTs, validDs, validTs)
 
 allData = rawDataToDs(constants.FOLDERFORTRAINING)
 train = allData[0]
 ttargets = allData[1]
-valid = allData[2]
-vtargets = allData[3]
+# valid = allData[2]
+# vtargets = allData[3]
 
 train = np.array(train)
 ttargets = np.array(ttargets)
@@ -100,11 +101,11 @@ train = torch.from_numpy(train).cuda()
 ttargets = torch.from_numpy(ttargets).cuda()
 ttargets = ttargets.view(-1, 1).double()
 
-valid = np.array(valid)
-vtargets = np.array(vtargets)
-valid = torch.from_numpy(valid).cuda()
-vtargets = torch.from_numpy(vtargets).cuda()
-vtargets = vtargets.view(-1, 1).double()
+# valid = np.array(valid)
+# vtargets = np.array(vtargets)
+# valid = torch.from_numpy(valid).cuda()
+# vtargets = torch.from_numpy(vtargets).cuda()
+# vtargets = vtargets.view(-1, 1).double()
 
 # Define dataset.
 train_ds = TensorDataset(train, ttargets)
