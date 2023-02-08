@@ -132,7 +132,7 @@ def log_status(file, model, num_epochs):
         finalR = []
         finalR.append(r) # Essentially turn the 1D array into a 2D array.
         train = np.array(finalR) # Convert to numpy array.
-        train = torch.from_numpy(train).cuda() # Turn it into a pytorch tensor to be used.
+        train = torch.from_numpy(train) # Turn it into a pytorch tensor to be used.
         
         list(model.parameters()) # Returns a list of the model parameters.
         preds = model(train) # Generate the predicted concentration of the file.
@@ -203,8 +203,8 @@ def train_data(files_to_train, path, num):
 
     train = np.array(train)
     ttargets = np.array(ttargets)
-    train = torch.from_numpy(train).cuda()
-    ttargets = torch.from_numpy(ttargets).cuda()
+    train = torch.from_numpy(train)
+    ttargets = torch.from_numpy(ttargets)
     ttargets = ttargets.view(-1, 1).double()
 
     # Define dataset.
@@ -217,9 +217,9 @@ def train_data(files_to_train, path, num):
     
     # Define model
     if CREATEMODEL == 1:
-        model = nn.Linear(300, 1).cuda() # Can be used instead of initializing the weights & biases manually. This does it automatically.
+        model = nn.Linear(300, 1) # Can be used instead of initializing the weights & biases manually. This does it automatically.
     else:
-        model = nn.Linear(300, 1).cuda()
+        model = nn.Linear(300, 1)
         model.load_state_dict(torch.load(model_name))
     
     list(model.parameters()) # Returns a list containing all the weights and bias matrices present in the model.
