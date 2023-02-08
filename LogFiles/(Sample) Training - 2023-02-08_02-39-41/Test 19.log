@@ -1,0 +1,104 @@
+Model name: models/model142.mdx
+Files Trained On: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]
+
+
+All File Concentration Predictions at 100 epochs (sorted by accuracy in descending order):
+
+File: AllData\Concen_1_0P.csv:            Predicted concentration: 0.112856%	Actual concentration: 0.0%    Difference: -0.112856%
+File: AllData\Concen_2_5P.csv:            Predicted concentration: 5.169406%	Actual concentration: 5.0%    Difference: -0.169406%
+File: AllData\Concen_12_45P.csv:          Predicted concentration: 45.411141%	Actual concentration: 45.0%   Difference: -0.411141%
+File: AllData\Concen_13_50P.csv:          Predicted concentration: 49.278176%	Actual concentration: 50.0%   Difference: 0.721824%
+File: AllData\Concen_14_55P.csv:          Predicted concentration: 53.653604%	Actual concentration: 55.0%   Difference: 1.346396%
+File: AllData\Concen_11_40P.csv:          Predicted concentration: 42.842470%	Actual concentration: 40.0%   Difference: -2.84247%
+File: AllData\Concen_15_60P.csv:          Predicted concentration: 56.316147%	Actual concentration: 60.0%   Difference: 3.683853%
+File: AllData\Concen_5_10P.csv:           Predicted concentration: 5.579387%	Actual concentration: 10.0%   Difference: 4.420613%
+File: AllData\Concen_16_65P.csv:          Predicted concentration: 59.127619%	Actual concentration: 65.0%   Difference: 5.872381%
+File: AllData\Concen_10_35P.csv:          Predicted concentration: 42.450466%	Actual concentration: 35.0%   Difference: -7.450466%
+File: AllData\Concen_26_25P.csv:          Predicted concentration: 32.641342%	Actual concentration: 25.0%   Difference: -7.641342%
+File: AllData\Concen_17_70P.csv:          Predicted concentration: 61.797066%	Actual concentration: 70.0%   Difference: 8.202934%
+File: AllData\Concen_9_30P.csv:           Predicted concentration: 38.415064%	Actual concentration: 30.0%   Difference: -8.415064%
+File: AllData\Concen_18_75P.csv:          Predicted concentration: 62.948704%	Actual concentration: 75.0%   Difference: 12.051296%
+File: AllData\Concen_25_20P.csv:          Predicted concentration: 32.281763%	Actual concentration: 20.0%   Difference: -12.281763%
+File: AllData\Concen_23_10P.csv:          Predicted concentration: 22.703566%	Actual concentration: 10.0%   Difference: -12.703566%
+File: AllData\Concen_8_25P.csv:           Predicted concentration: 37.927475%	Actual concentration: 25.0%   Difference: -12.927475%
+File: AllData\Concen_4_5P.csv:            Predicted concentration: 18.954933%	Actual concentration: 5.0%    Difference: -13.954933%
+File: AllData\Concen_24_15P.csv:          Predicted concentration: 29.114805%	Actual concentration: 15.0%   Difference: -14.114805%
+File: AllData\Concen_19_80P.csv:          Predicted concentration: 65.561492%	Actual concentration: 80.0%   Difference: 14.438508%
+File: AllData\Concen_7_20P.csv:           Predicted concentration: 35.652089%	Actual concentration: 20.0%   Difference: -15.652089%
+File: AllData\Concen_20_85P.csv:          Predicted concentration: 67.504525%	Actual concentration: 85.0%   Difference: 17.495475%
+File: AllData\Concen_6_15P.csv:           Predicted concentration: 33.715841%	Actual concentration: 15.0%   Difference: -18.715841%
+File: AllData\Concen_21_90P.csv:          Predicted concentration: 71.031478%	Actual concentration: 90.0%   Difference: 18.968522%
+File: AllData\Concen_22_95P.csv:          Predicted concentration: 73.043126%	Actual concentration: 95.0%   Difference: 21.956874%
+File: AllData\Concen_3_0P.csv:            Predicted concentration: 24.271687%	Actual concentration: 0.0%    Difference: -24.271687%
+File: AllData\Concen_27_100P.csv:         Predicted concentration: 74.954102%	Actual concentration: 100.0%  Difference: 25.045898%
+Average error in predictions for top 5 files:	0.552325%
+Average error in predictions for top 10 files:	2.703141%
+Average error in predictions for all files:		10.587758%
+
+
+All File Concentration Predictions at 1000 epochs (sorted by accuracy in descending order):
+
+File: AllData\Concen_2_5P.csv:            Predicted concentration: 4.964042%	Actual concentration: 5.0%    Difference: 0.035958%
+File: AllData\Concen_13_50P.csv:          Predicted concentration: 49.790835%	Actual concentration: 50.0%   Difference: 0.209165%
+File: AllData\Concen_9_30P.csv:           Predicted concentration: 30.310262%	Actual concentration: 30.0%   Difference: -0.310262%
+File: AllData\Concen_25_20P.csv:          Predicted concentration: 19.519893%	Actual concentration: 20.0%   Difference: 0.480107%
+File: AllData\Concen_18_75P.csv:          Predicted concentration: 73.941340%	Actual concentration: 75.0%   Difference: 1.05866%
+File: AllData\Concen_24_15P.csv:          Predicted concentration: 13.878142%	Actual concentration: 15.0%   Difference: 1.121858%
+File: AllData\Concen_19_80P.csv:          Predicted concentration: 78.560045%	Actual concentration: 80.0%   Difference: 1.439955%
+File: AllData\Concen_21_90P.csv:          Predicted concentration: 88.281768%	Actual concentration: 90.0%   Difference: 1.718232%
+File: AllData\Concen_11_40P.csv:          Predicted concentration: 38.213343%	Actual concentration: 40.0%   Difference: 1.786657%
+File: AllData\Concen_17_70P.csv:          Predicted concentration: 71.938275%	Actual concentration: 70.0%   Difference: -1.938275%
+File: AllData\Concen_12_45P.csv:          Predicted concentration: 42.792088%	Actual concentration: 45.0%   Difference: 2.207912%
+File: AllData\Concen_16_65P.csv:          Predicted concentration: 67.234560%	Actual concentration: 65.0%   Difference: -2.23456%
+File: AllData\Concen_15_60P.csv:          Predicted concentration: 62.249844%	Actual concentration: 60.0%   Difference: -2.249844%
+File: AllData\Concen_14_55P.csv:          Predicted concentration: 57.533647%	Actual concentration: 55.0%   Difference: -2.533647%
+File: AllData\Concen_10_35P.csv:          Predicted concentration: 37.534936%	Actual concentration: 35.0%   Difference: -2.534936%
+File: AllData\Concen_20_85P.csv:          Predicted concentration: 82.001330%	Actual concentration: 85.0%   Difference: 2.99867%
+File: AllData\Concen_22_95P.csv:          Predicted concentration: 91.776789%	Actual concentration: 95.0%   Difference: 3.223211%
+File: AllData\Concen_1_0P.csv:            Predicted concentration: -4.086545%	Actual concentration: 0.0%    Difference: 4.086545%
+File: AllData\Concen_5_10P.csv:           Predicted concentration: 5.590983%	Actual concentration: 10.0%   Difference: 4.409017%
+File: AllData\Concen_8_25P.csv:           Predicted concentration: 29.420313%	Actual concentration: 25.0%   Difference: -4.420313%
+File: AllData\Concen_27_100P.csv:         Predicted concentration: 95.175241%	Actual concentration: 100.0%  Difference: 4.824759%
+File: AllData\Concen_26_25P.csv:          Predicted concentration: 20.146143%	Actual concentration: 25.0%   Difference: 4.853857%
+File: AllData\Concen_3_0P.csv:            Predicted concentration: 5.390654%	Actual concentration: 0.0%    Difference: -5.390654%
+File: AllData\Concen_7_20P.csv:           Predicted concentration: 25.397693%	Actual concentration: 20.0%   Difference: -5.397693%
+File: AllData\Concen_6_15P.csv:           Predicted concentration: 21.939076%	Actual concentration: 15.0%   Difference: -6.939076%
+File: AllData\Concen_23_10P.csv:          Predicted concentration: 2.505634%	Actual concentration: 10.0%   Difference: 7.494366%
+File: AllData\Concen_4_5P.csv:            Predicted concentration: -4.141475%	Actual concentration: 5.0%    Difference: 9.141475%
+Average error in predictions for top 5 files:	0.418830%
+Average error in predictions for top 10 files:	1.009913%
+Average error in predictions for all files:		3.149617%
+
+
+All File Concentration Predictions at 2000 epochs (sorted by accuracy in descending order):
+
+File: AllData\Concen_2_5P.csv:            Predicted concentration: 4.964525%	Actual concentration: 5.0%    Difference: 0.035475%
+File: AllData\Concen_13_50P.csv:          Predicted concentration: 49.889640%	Actual concentration: 50.0%   Difference: 0.11036%
+File: AllData\Concen_9_30P.csv:           Predicted concentration: 30.249899%	Actual concentration: 30.0%   Difference: -0.249899%
+File: AllData\Concen_25_20P.csv:          Predicted concentration: 19.635850%	Actual concentration: 20.0%   Difference: 0.36415%
+File: AllData\Concen_24_15P.csv:          Predicted concentration: 13.982195%	Actual concentration: 15.0%   Difference: 1.017805%
+File: AllData\Concen_18_75P.csv:          Predicted concentration: 73.969063%	Actual concentration: 75.0%   Difference: 1.030937%
+File: AllData\Concen_19_80P.csv:          Predicted concentration: 78.577400%	Actual concentration: 80.0%   Difference: 1.4226%
+File: AllData\Concen_21_90P.csv:          Predicted concentration: 88.278978%	Actual concentration: 90.0%   Difference: 1.721022%
+File: AllData\Concen_11_40P.csv:          Predicted concentration: 38.199019%	Actual concentration: 40.0%   Difference: 1.800981%
+File: AllData\Concen_17_70P.csv:          Predicted concentration: 71.970895%	Actual concentration: 70.0%   Difference: -1.970895%
+File: AllData\Concen_12_45P.csv:          Predicted concentration: 42.781347%	Actual concentration: 45.0%   Difference: 2.218653%
+File: AllData\Concen_16_65P.csv:          Predicted concentration: 67.283003%	Actual concentration: 65.0%   Difference: -2.283003%
+File: AllData\Concen_15_60P.csv:          Predicted concentration: 62.309693%	Actual concentration: 60.0%   Difference: -2.309693%
+File: AllData\Concen_10_35P.csv:          Predicted concentration: 37.495509%	Actual concentration: 35.0%   Difference: -2.495509%
+File: AllData\Concen_14_55P.csv:          Predicted concentration: 57.602033%	Actual concentration: 55.0%   Difference: -2.602033%
+File: AllData\Concen_20_85P.csv:          Predicted concentration: 82.006665%	Actual concentration: 85.0%   Difference: 2.993335%
+File: AllData\Concen_22_95P.csv:          Predicted concentration: 91.768151%	Actual concentration: 95.0%   Difference: 3.231849%
+File: AllData\Concen_1_0P.csv:            Predicted concentration: -4.095182%	Actual concentration: 0.0%    Difference: 4.095182%
+File: AllData\Concen_8_25P.csv:           Predicted concentration: 29.329114%	Actual concentration: 25.0%   Difference: -4.329114%
+File: AllData\Concen_5_10P.csv:           Predicted concentration: 5.560003%	Actual concentration: 10.0%   Difference: 4.439997%
+File: AllData\Concen_26_25P.csv:          Predicted concentration: 20.283286%	Actual concentration: 25.0%   Difference: 4.716714%
+File: AllData\Concen_27_100P.csv:         Predicted concentration: 95.159407%	Actual concentration: 100.0%  Difference: 4.840593%
+File: AllData\Concen_7_20P.csv:           Predicted concentration: 25.311996%	Actual concentration: 20.0%   Difference: -5.311996%
+File: AllData\Concen_3_0P.csv:            Predicted concentration: 5.502506%	Actual concentration: 0.0%    Difference: -5.502506%
+File: AllData\Concen_6_15P.csv:           Predicted concentration: 21.824950%	Actual concentration: 15.0%   Difference: -6.82495%
+File: AllData\Concen_23_10P.csv:          Predicted concentration: 2.613577%	Actual concentration: 10.0%   Difference: 7.386423%
+File: AllData\Concen_4_5P.csv:            Predicted concentration: -4.025798%	Actual concentration: 5.0%    Difference: 9.025798%
+Average error in predictions for top 5 files:	0.355538%
+Average error in predictions for top 10 files:	0.972412%
+Average error in predictions for all files:		3.123388%

@@ -1,0 +1,114 @@
+Number of epochs: 10000000
+Files used for training:
+Concen_10_35P.csv
+Concen_11_40P.csv
+Concen_12_45P.csv
+Concen_13_50P.csv
+Concen_14_55P.csv
+Concen_16_65P.csv
+Concen_17_70P.csv
+Concen_19_80P.csv
+Concen_1_0P.csv
+Concen_21_90P.csv
+Concen_22_95P.csv
+Concen_27_100P.csv
+Concen_2_5P.csv
+Concen_3_0P.csv
+Concen_4_5P.csv
+Concen_5_10P.csv
+Concen_6_15P.csv
+Concen_7_20P.csv
+Concen_8_25P.csv
+
+
+All File Concentration Predictions:
+
+File: AllData\Concen_5_10P.csv:
+Predicted concentration: 9.823377%	Actual concentration: 10.0%	Difference: 0.176623%
+
+File: AllData\Concen_18_75P.csv:
+Predicted concentration: 74.677287%	Actual concentration: 75.0%	Difference: 0.322713%
+
+File: AllData\Concen_19_80P.csv:
+Predicted concentration: 79.599155%	Actual concentration: 80.0%	Difference: 0.400845%
+
+File: AllData\Concen_7_20P.csv:
+Predicted concentration: 20.483456%	Actual concentration: 20.0%	Difference: -0.483456%
+
+File: AllData\Concen_10_35P.csv:
+Predicted concentration: 34.449507%	Actual concentration: 35.0%	Difference: 0.550493%
+
+File: AllData\Concen_24_15P.csv:
+Predicted concentration: 14.429166%	Actual concentration: 15.0%	Difference: 0.570834%
+
+File: AllData\Concen_13_50P.csv:
+Predicted concentration: 50.810447%	Actual concentration: 50.0%	Difference: -0.810447%
+
+File: AllData\Concen_1_0P.csv:
+Predicted concentration: -0.836821%	Actual concentration: 0.0%	Difference: 0.836821%
+
+File: AllData\Concen_21_90P.csv:
+Predicted concentration: 89.155752%	Actual concentration: 90.0%	Difference: 0.844248%
+
+File: AllData\Concen_2_5P.csv:
+Predicted concentration: 5.984022%	Actual concentration: 5.0%	Difference: -0.984022%
+
+File: AllData\Concen_22_95P.csv:
+Predicted concentration: 93.968972%	Actual concentration: 95.0%	Difference: 1.031028%
+
+File: AllData\Concen_12_45P.csv:
+Predicted concentration: 43.831916%	Actual concentration: 45.0%	Difference: 1.168084%
+
+File: AllData\Concen_8_25P.csv:
+Predicted concentration: 26.213758%	Actual concentration: 25.0%	Difference: -1.213758%
+
+File: AllData\Concen_6_15P.csv:
+Predicted concentration: 16.504068%	Actual concentration: 15.0%	Difference: -1.504068%
+
+File: AllData\Concen_17_70P.csv:
+Predicted concentration: 71.840224%	Actual concentration: 70.0%	Difference: -1.840224%
+
+File: AllData\Concen_26_25P.csv:
+Predicted concentration: 23.061248%	Actual concentration: 25.0%	Difference: 1.938752%
+
+File: AllData\Concen_16_65P.csv:
+Predicted concentration: 67.145533%	Actual concentration: 65.0%	Difference: -2.145533%
+
+File: AllData\Concen_11_40P.csv:
+Predicted concentration: 37.727168%	Actual concentration: 40.0%	Difference: 2.272832%
+
+File: AllData\Concen_27_100P.csv:
+Predicted concentration: 97.607841%	Actual concentration: 100.0%	Difference: 2.392159%
+
+File: AllData\Concen_14_55P.csv:
+Predicted concentration: 57.485807%	Actual concentration: 55.0%	Difference: -2.485807%
+
+File: AllData\Concen_20_85P.csv:
+Predicted concentration: 82.254525%	Actual concentration: 85.0%	Difference: 2.745475%
+
+File: AllData\Concen_25_20P.csv:
+Predicted concentration: 22.839158%	Actual concentration: 20.0%	Difference: -2.839158%
+
+File: AllData\Concen_9_30P.csv:
+Predicted concentration: 27.126052%	Actual concentration: 30.0%	Difference: 2.873948%
+
+File: AllData\Concen_3_0P.csv:
+Predicted concentration: 3.155258%	Actual concentration: 0.0%	Difference: -3.155258%
+
+File: AllData\Concen_15_60P.csv:
+Predicted concentration: 63.535274%	Actual concentration: 60.0%	Difference: -3.535274%
+
+File: AllData\Concen_4_5P.csv:
+Predicted concentration: 0.050583%	Actual concentration: 5.0%	Difference: 4.949417%
+
+File: AllData\Concen_23_10P.csv:
+Predicted concentration: 4.024566%	Actual concentration: 10.0%	Difference: 5.975434%
+
+File: AllData\Concen_41_50P.csv:
+Predicted concentration: 38.956355%	Actual concentration: 50.0%	Difference: 11.043645%
+
+File: AllData\Concen_39_50P.csv:
+Predicted concentration: 76.874325%	Actual concentration: 50.0%	Difference: -26.874325%
+
+File: AllData\Concen_40_50P.csv:
+Predicted concentration: -53.560666%	Actual concentration: 50.0%	Difference: 103.560666%

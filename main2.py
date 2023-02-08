@@ -46,7 +46,13 @@ def seperateColumn (column, document):
 #all files in one directory
 #add column to include target (label)
 def rawDataToDs(path):
-    all_files = glob.glob(path + "/*.csv")
+    # all_files = glob.glob(path + "/*.csv")
+    all_files = []
+    for f in glob.glob("AllData/*.csv"):
+        for i in constants.FILESTOTRAIN:
+            if f'Concen_{i}_' in f:
+                all_files.append(f)
+    
     trainDs = []
     validDs = []
     trainTs = []
@@ -143,6 +149,7 @@ print(torch.cuda.get_device_name(0))
 print(train.device)
 print(ttargets.device)
 print(next(model.parameters()).is_cuda)
+print(len(constants.FILESTOTRAIN))
 
 # Define optimizer (used instead of manually manipulating the model's weights & biases using gradients).
 # Note: SGD is short for "stochastic gradient descent". "Stochastic" indicates that samples are selected
@@ -191,10 +198,11 @@ batchPer = batch.split("P")[0]
 
 # Generate output filename based on current date and time.
 now = datetime.now()
-filename = "LogFiles\\" + now.strftime("%Y-%m-%d_%H-%M-%S.log")
+filename = "LogFiles\\" + now.strftime("Training_-_%Y-%m-%d_%H-%M-%S.log")
 print(filename)
 output = open(filename, "w")
 output.write(f"Number of epochs: {constants.NUMEPOCHS}\n")
+output.write(f"Model name: {constants.MODELNAME}\n")
 
 # Print trained files.
 trained_files = glob.glob(constants.FOLDERFORTRAINING + "/*.csv")
